@@ -1,28 +1,19 @@
 import Image from './images.model';
-import { getImagesRepository } from './images.repository';
 
 export async function create(imageFields: Omit<Image, 'id'>): Promise<Image> {
-  const imagesRepository = getImagesRepository();
-
-  const createdImage = imagesRepository.create(imageFields);
-
-  await imagesRepository.save(createdImage);
+  const createdImage = await Image.create(imageFields).save();
 
   return createdImage;
 }
 
 export async function index(): Promise<Image[]> {
-  const imagesRepository = getImagesRepository();
-
-  const images = await imagesRepository.find();
+  const images = await Image.find();
 
   return images;
 }
 
 export async function show(id: number): Promise<Image> {
-  const imagesRepository = getImagesRepository();
-
-  const image = await imagesRepository.findOneOrFail(id);
+  const image = await Image.findOneOrFail(id);
 
   return image;
 }

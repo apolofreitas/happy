@@ -1,5 +1,6 @@
 import {
   Entity,
+  BaseEntity,
   Column,
   PrimaryGeneratedColumn,
   ManyToOne,
@@ -8,7 +9,7 @@ import {
 import Orphanage from '../orphanages/orphanages.model';
 
 @Entity('images')
-export default class Image {
+export default class Image extends BaseEntity {
   @PrimaryGeneratedColumn('increment')
   id: number;
 
