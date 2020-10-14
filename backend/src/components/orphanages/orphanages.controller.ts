@@ -1,6 +1,8 @@
 import { Request, Response } from 'express';
+import { DeepPartial } from 'typeorm';
 import * as Yup from 'yup';
 
+import Orphanage from './orphanages.model';
 import * as orphanageService from './orphanages.service';
 
 export async function index(_request: Request, response: Response) {
@@ -59,7 +61,11 @@ export async function create(request: Request, response: Response) {
 
   await orphanageFieldsSchema.validate(orphanageFields, { abortEarly: false });
 
-  const createdOrphanage = await orphanageService.create(orphanageFields);
+  const castedOrphanageFields = orphanageFieldsSchema.cast(
+    orphanageFields,
+  ) as DeepPartial<Orphanage>;
+
+  const createdOrphanage = await orphanageService.create(castedOrphanageFields);
 
   return response.status(201).json({ orphanage: createdOrphanage });
 }

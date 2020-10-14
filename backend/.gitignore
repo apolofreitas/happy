@@ -232,4 +232,4 @@ dist
 .pnp.*
 
 uploads
-
+src/database/database.sqlite
