@@ -8,8 +8,8 @@ import {
 } from 'typeorm';
 import Orphanage from '../orphanages/orphanages.model';
 
-@Entity('images')
-export default class Image extends BaseEntity {
+@Entity('orphanage_images')
+export default class OrphanageImage extends BaseEntity {
   @PrimaryGeneratedColumn('increment')
   id: number;
 

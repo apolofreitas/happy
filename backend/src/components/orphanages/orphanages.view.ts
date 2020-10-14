@@ -1,5 +1,5 @@
 import Orphanage from './orphanages.model';
-import * as imagesView from '../images/images.view';
+import * as orphanageImagesView from '../orphanage_images/orphanage_images.view';
 
 export function render(orphanage: Orphanage) {
   return {
@@ -11,7 +11,7 @@ export function render(orphanage: Orphanage) {
     instructions: orphanage.instructions,
     opening_hours: orphanage.opening_hours,
     open_on_weekends: orphanage.open_on_weekends,
-    images: imagesView.renderMany(orphanage.images),
+    images: orphanageImagesView.renderMany(orphanage.images),
   };
 }
 

@@ -6,7 +6,7 @@ import {
   OneToMany,
   JoinColumn,
 } from 'typeorm';
-import Image from '../images/images.model';
+import OrphanageImage from '../orphanage_images/orphanage_images.model';
 
 @Entity('orphanages')
 export default class Orphanage extends BaseEntity {
@@ -34,9 +34,9 @@ export default class Orphanage extends BaseEntity {
   @Column()
   open_on_weekends: boolean;
 
-  @OneToMany(() => Image, image => image.orphanage, {
+  @OneToMany(() => OrphanageImage, orphanageImage => orphanageImage.orphanage, {
     cascade: ['insert', 'update'],
   })
   @JoinColumn({ name: 'orphanage_id' })
-  images: Image[];
+  images: OrphanageImage[];
 }
