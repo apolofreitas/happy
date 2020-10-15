@@ -4,8 +4,10 @@
   "main": "src/server/server.bootstrap.ts",
   "license": "MIT",
   "scripts": {
-    "start:dev": "ts-node-dev --respawn --transpile-only .",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
+    "dev": "ts-node-dev --respawn --transpile-only .",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
+    "migration:run": "yarn typeorm migration:run",
+    "migration:revert": " yarn typeorm migration:revert"
   },
   "dependencies": {
     "cors": "^2.8.5",
