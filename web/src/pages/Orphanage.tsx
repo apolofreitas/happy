@@ -85,7 +85,7 @@ export default function Orphanage() {
                 doubleClickZoom={false}
               >
                 <TileLayer
-                  url={`https://api.mapbox.com/styles/v1/apolofreitas/ckg73f5lf0egg19mbul2v46md/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
+                  url={`https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
                 />
                 <Marker
                   interactive={false}

@@ -42,12 +42,12 @@ function OrphanagesMap() {
       </aside>
 
       <Map
-        center={[-3.1291652, -60.0283977]}
+        center={[-3.0936845, -59.9417002]}
         zoom={12}
         style={{ width: '100%', height: '100%' }}
       >
         <TileLayer
-          url={`https://api.mapbox.com/styles/v1/apolofreitas/ckg73f5lf0egg19mbul2v46md/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
+          url={`https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
         />
 
         {orphanages.map(orphanage => {
