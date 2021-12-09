@@ -39,7 +39,7 @@ The Layout was developed by [Tiago Luchtenberg](https://www.linkedin.com/in/tiag
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/apolofreitas/payflow/issues).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/apolofreitas/happy/issues).
 
 ## 📝 License
 
